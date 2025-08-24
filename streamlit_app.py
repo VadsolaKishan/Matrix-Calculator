@@ -10,7 +10,7 @@ st.set_page_config(page_title="Matrix Calculator (Streamlit)", layout="wide")
 # Determine the API base URL based on the environment
 # For local development, use localhost
 # For deployment, replace with your public Flask API URL
-API_BASE = "http://127.0.0.1:5000"
+API_BASE = "https://matrix-calculator-e534.onrender.com"
 
 st.sidebar.header("Navigation")
 page = st.sidebar.radio("Go to", ["Calculator", "History"])
@@ -183,4 +183,5 @@ elif page == "History":
                 except Exception as e:
                     st.error(f"Delete failed: {e}")
     else:
+
         st.write("_No history entries yet_")
